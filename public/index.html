@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+  <head>
+ 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+  	<link href="styles/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8" /> 
+    <title>My test page</title>	
+  </head>
+  <body>
+	<h1>Mozila is cool!</h1>
+	<p>We are a global community of builders, working together to keep the Internet alive and accessible.</p>
+	
+	<div class='block-form'>	
+	<h2>Blocks</h2>
+	<div>
+	<form>
+		<legend>New Block</legend>
+		<input name='name' placeholder="Name" /> <br/>
+		<textarea name='description' placeholder="Description"></textarea> <br/>
+		<input type="Submit" value='Click to submit'/>
+	</form>
+	</div>
+	<ul class='blocks-list'></ul>
+	</div>
+	
+	<button id='change'>jQuery Test</button>
+	<button id='add'>Ajax Test</button>	
+	<ul id='toadd'></ul>
+
+	<script src="scripts/jquery.js"></script>
+	<script src="scripts/client.js"></script>	
+  </body>
+</html>
