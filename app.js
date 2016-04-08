@@ -1,6 +1,18 @@
 var express=require("express");
 var app=express();
 var logger=require("./logger");
+
+var blockRouter = require('./routes/blocks');
+
+//logger from logger module
+app.use(logger);
+//serve static files in /public
+app.use(express.static('public'));
+/*using block module*/
+app.use('/blocks',blockRouter);
+
+/** blocks related code before using blocks module.
+
 var bodyParser = require('body-parser');
 var parserUrlencoded = bodyParser.urlencoded({extended:false});
 
@@ -11,10 +23,12 @@ var blocks={
 	'Rotating':'THis is Rotating'
 };
 
-//logger from logger module
-app.use(logger);
-//serve static files in /public
-app.use(express.static('public'));
+//parse parameters
+app.param('emma',function(request,response,next){
+	var rawemma = request.params.emma;
+	request.blockName = upperLower(rawemma);
+	next();
+})
 
 app.route('/blocks')
 	.get(function(request,response){
@@ -40,19 +54,11 @@ app.route('/blocks/:emma')
 		res.sendStatus(200);
 	});
 
-//parse parameters
-app.param('emma',function(request,response,next){
-	var rawemma = request.params.emma;
-	request.blockName = upperLower(rawemma);
-	next();
-})
-
-
+function upperLower(str){
+	 return str[0].toUpperCase()+str.slice(1).toLowerCase();
+}
+*/
 
 app.listen(3000,function(){
 	console.log('Listening on port 3000.');
 });
-
-function upperLower(str){
-	 return str[0].toUpperCase()+str.slice(1).toLowerCase();
-}
