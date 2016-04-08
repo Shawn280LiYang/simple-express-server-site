@@ -22,7 +22,7 @@ $(document).ready(function(){
 			list.push(newEle);
 			*/
 			block = blocks[i];
-			content='<a href=# data-block='+block+'> <img class="deleteicon" src="/images/deleteicon.png"/> </a>  <a href="/blocks/'+block+'"> '+block+'</a>';
+			content='<a href=# data-block='+block+'> <img class="deleteicon" src="/images/deleteicon.png"/> </a>  <a class="aaa" href="/blocks/'+block+'"> '+block+'</a>';
 			newEle =$('<li>',{html:content});
 			list.push(newEle);
 		}

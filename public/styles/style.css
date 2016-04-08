@@ -5,6 +5,9 @@ a{
 a:hover{
 	color: pink;
 }
+.aaa{
+	margin-left:15px; 
+}
 html {
 	font-size: 16px; /* px means 'pixels': the base font size is now 10 pixels high  */
 	font-family: 'Open Sans', sans-serif;
@@ -61,7 +64,15 @@ textarea{
 }
 ul{
 	list-style-type: none;
+	font-size: 18px;
+	text-indent: -36px;
+}
+li{
+	margin-bottom:10px; 
 }
 .deleteicon{
-	height: 20px;
+	height: 18px;
+}
+form{
+	margin: 40px 0 0 0;
 }
